@@ -9,10 +9,11 @@ namespace Atividade
 	{
 		public App ()
 		{
+            
 			InitializeComponent();
+            
 
-			MainPage = new MainPage();
-		}
+        }
 
 		protected override void OnStart ()
 		{

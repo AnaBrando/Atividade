@@ -4,11 +4,51 @@
              xmlns:local="clr-namespace:Atividade"
              x:Class="Atividade.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid RowSpacing="0">
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Source="fabrica.jpg" Grid.Row="0" Aspect="AspectFill"/>
+        <StackLayout BackgroundColor="AliceBlue" Grid.Row="1">
+            <Label TranslationY="40" TranslationX="110" TextColor="Red" Font="Arial">Bem vindo meu aplicativo</Label>
+            <Label  TranslationX="90" TranslationY="80" TextColor="Red" Font="Arial">Saiba sobre a World Web Wide!</Label>
+        </StackLayout>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0" BackgroundColor="White">
+                <Label  FontSize="12" TextColor="Black" HorizontalOptions="Center" TranslationY="60">
+                    351 Seguindo
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" BackgroundColor="White">
+                <Label HorizontalOptions="Center" FontSize="12" TextColor="Black" TranslationY="60">
+                    35 Seguidores
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" BackgroundColor="White">
+                <Label HorizontalOptions="Center" FontSize="12" TextColor="Black"  TranslationY="60">
+                    356 Publicação
+                </Label>
+            </StackLayout>
+          
+        </Grid>
+        <Label TextColor="Black" Text="@SENAC" Grid.Row="3" BackgroundColor="Aquamarine" Style="{StaticResource MainBodyLabel}">
+         
+        </Label>
+        <Button Text="Click" Grid.Row="4" Margin="0,20" Style="{StaticResource FollowButton}"></Button>
+        <Image Source="internet.png" WidthRequest="80" HeightRequest="80" 
+         HorizontalOptions="Center" VerticalOptions="End" TranslationX="8" 
+               TranslationY="50"
+         ></Image>
+    </Grid>
 
 </ContentPage>
+    <!-- Style={Static Resource 'Classe'}-->
